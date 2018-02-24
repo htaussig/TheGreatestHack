@@ -9,4 +9,24 @@ class Event {
         this.grades = grades;
         this.friends = friends;
     }
+	
+	public int getStressChange(){
+		return stress;
+	}
+	
+	public int getEnergyChange(){
+		return energy;
+	}
+	
+	public int getFriendsChange(){
+		return friends;
+	}
+	
+	public int getGradesChange(){
+		return grades;
+	}
+	
+	public String toString() {
+		return this.event;
+	}
 }
