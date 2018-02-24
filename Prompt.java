@@ -6,6 +6,7 @@ public class Prompt {
 	private int[] friends = new int[2];
 	private int[] grades = new int[2];
 	private String[] options = new String[2];
+	private double orderNum;
 
 	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2) {
 		this.prompt = prompt;
@@ -19,33 +20,26 @@ public class Prompt {
 		this.friends[1] = friends2;
 		this.grades[0] = grades1;
 		this.grades[1] = grades2;
+		this.orderNum = Math.random();
 	}
 	
 	public String toString() {
 		return this.prompt;
 	}
 	
-	public int[] getStress(){
-		
+	public int[] getStressChange(){
 		return stress;
-		
 	}
 	
-	public int[] getEnergy(){
-		
+	public int[] getEnergyChange(){
 		return energy;
-		
 	}
 	
-	public int[] getFriends(){
-		
+	public int[] getFriendsChange(){
 		return friends;
-		
 	}
 	
-	public int[] getGrades(){
-		
+	public int[] getGradesChange(){
 		return grades;
-		
 	}
 }
