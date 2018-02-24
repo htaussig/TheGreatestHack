@@ -14,6 +14,7 @@ public class main{
 	private static boolean alive = true;
 	private static int hour = 6;
 	private static int minute = 0;
+	private static int day = 0; // 0 = monday
 
   public static void main(String args[]){
 	  
@@ -108,4 +109,14 @@ private static void displayPrompt() {
 	  }
   }
  
+  public boolean isWeekday(){
+	  
+	  if(day >= 5){ //0 == monday
+		  
+		  return false;
+		  
+	  }
+	  
+	  return true;
+  }
 }
