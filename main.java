@@ -12,7 +12,7 @@ public class main{
 	private static int friends = 50;
 	private static int grades = 50;
 	private static boolean alive = true;
-	private static int hour = 0;
+	private static int hour = 6;
 	private static int minute = 0;
 
   public static void main(String args[]){
@@ -33,18 +33,23 @@ public class main{
 		  else {
 			  System.out.println("You failed");
 		  }
-		  minute += 30;
-		  if (minute >= 60) {
-			  hour += minute / 60;
-			  minute -= 60;
-		  }
+		  timeIncrease();
+		  
 	  }
 	 
 	  
 	  
   }
 
-  private static void printStats() {
+  private static void timeIncrease() {
+	  minute += 30;
+	  if (minute >= 60) {
+		  hour += minute / 60;
+		  minute -= 60;
+	  }
+}
+
+private static void printStats() {
 	  System.out.println("Stress: " + stress);
 	  System.out.println("Energy: " + energy);
 	  System.out.println("Friends: " + friends);
