@@ -12,7 +12,7 @@ public class Prompt {
 		this.options[0] = option1;
 		this.options[1] = option2;
 		this.stress[0] = stress1;
-		this.stress[1] = stress1;
+		this.stress[1] = stress2;
 		this.energy[0] = energy1;
 		this.energy[1] = energy2;
 		this.friends[0] = friends1;
@@ -23,5 +23,29 @@ public class Prompt {
 	
 	public String toString() {
 		return this.prompt;
+	}
+	
+	public int[] getStress(){
+		
+		return stress;
+		
+	}
+	
+	public int[] getEnergy(){
+		
+		return energy;
+		
+	}
+	
+	public int[] getFriends(){
+		
+		return friends;
+		
+	}
+	
+	public int[] getGrades(){
+		
+		return grades;
+		
 	}
 }
