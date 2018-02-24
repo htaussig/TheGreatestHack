@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class main{
 
-	private static int promptNum;
+	private static int promptNum = 0;
 	private static ArrayList<Prompt> prompts = new ArrayList<>();
 	private static int stress = 50;
 	private static int energy = 50;
@@ -17,28 +17,43 @@ public class main{
   public static void main(String args[]){
 	  
 	  intializePrompts();
+	  printStats();
 	  
 	  while(alive){
 		  displayPrompt();
-		  getButtonPressed();
-		  
+		  int choice = getButtonPressed();
+		  choice(choice);
+		  promptNum++;
+		  System.out.println("time passes");
+		  printStats();
 	  }
 	 
 	  
 	  
   }
 
-  private static void displayPrompt() {
-	
-	  //System.out.println(prompts.get(promptNum).toString());
-	  promptNum++;
+  private static void printStats() {
+	  
+	  System.out.println("Stress: " + stress);
+	  System.out.println("Energy: " + energy);
+	  System.out.println("Friends: " + friends);
+	  System.out.println("Grades: " + grades);
 	  
   }
 
-private static void intializePrompts() {
+private static void displayPrompt() {
+	
+	if(promptNum >= prompts.size()){
+		promptNum = 0;
+	}
+	  System.out.println(prompts.get(promptNum).toString());
+	  
+  }
+
+  private static void intializePrompts() {
 	  prompts.add(new Prompt("You did your homework until 1 am. When do you wake up?", "yes", "no", -5, 10, -15, 5, 0, -5, 10, -10));
 		
-	  System.out.println(prompts.get(0));
+	  //System.out.println(prompts.get(0));
   }
 
 /**
@@ -55,13 +70,13 @@ private static void intializePrompts() {
 	  
   }
   
-  public static void getButtonPressed(){
+  public static int getButtonPressed(){
 	  
 	  Scanner sc = new Scanner(System.in);
 	  
 	  int i = sc.nextInt();
 	  
-	  choice(i);
+	  return i;
 	  
   }
  
