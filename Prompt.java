@@ -8,9 +8,11 @@ public class Prompt {
 	private int[] energy = new int[2];
 	private int[] friends = new int[2];
 	private int[] grades = new int[2];
+	private int[] possibleTimes = new int[2];
+	private int[] possibleDays = new int[2];
 	private double orderNum;
 
-	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2) {
+	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2, int[] possibleTimes, int[] possibleDays) {
 		this.prompt = prompt;
 		this.options[0] = option1;
 		this.options[1] = option2;
@@ -22,6 +24,27 @@ public class Prompt {
 		this.friends[1] = friends2;
 		this.grades[0] = grades1;
 		this.grades[1] = grades2;
+		this.possibleTimes = possibleTimes;
+		this.possibleDays = possibleDays;
+		this.orderNum = Math.random();
+	}
+	
+	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2) {
+		this.prompt = prompt;
+		int[] allHours = {0, 24};
+		int[] allDays = {0, 6};
+		this.options[0] = option1;
+		this.options[1] = option2;
+		this.stress[0] = stress1;
+		this.stress[1] = stress2;
+		this.energy[0] = energy1;
+		this.energy[1] = energy2;
+		this.friends[0] = friends1;
+		this.friends[1] = friends2;
+		this.grades[0] = grades1;
+		this.grades[1] = grades2;
+		this.possibleTimes = allHours;
+		this.possibleDays = allDays;
 		this.orderNum = Math.random();
 	}
 	
