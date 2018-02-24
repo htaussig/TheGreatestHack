@@ -1,16 +1,16 @@
-class Prompt {
+public class Prompt {
 	
 	private String prompt;
-	private String[2] options;
-	private int[2] stress;
-	private int[2] energy;
-	private int[2] friends;
-	private int[2] grades;
+	private int[] stress = new int[2];
+	private int[] energy = new int[2];
+	private int[] friends = new int[2];
+	private int[] grades = new int[2];
+	private String[] options = new String[2];
 
 	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2) {
 		this.prompt = prompt;
 		this.options[0] = option1;
-		this.optiopns[1] = option2;
+		this.options[1] = option2;
 		this.stress[0] = stress1;
 		this.stress[1] = stress1;
 		this.energy[0] = energy1;
