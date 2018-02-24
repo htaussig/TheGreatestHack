@@ -22,10 +22,15 @@ public class main{
 	  while(alive){
 		  displayPrompt();
 		  int choice = getButtonPressed();
-		  choice(choice);
-		  promptNum++;
-		  System.out.println("time passes");
-		  printStats();
+		  if (choice != 2) {
+			  choice(choice);
+			  promptNum++;
+			  System.out.println("time passes");
+			  printStats();
+		  }
+		  else {
+			  System.out.println("You failed");
+		  }
 	  }
 	 
 	  
@@ -51,7 +56,7 @@ private static void displayPrompt() {
   }
 
   private static void intializePrompts() {
-	  prompts.add(new Prompt("You did your homework until 1 am. When do you wake up?", "YES", "NO", -5, 10, -15, 5, 0, -5, 10, -10));
+	  prompts.add(new Prompt("You did your homework until 1 am. When do you wake up?", "6:00 A.M.", "10:00 A.M.", -5, 10, -15, 5, 0, -5, 10, -10));
 		
 	  //System.out.println(prompts.get(0));
   }
@@ -74,10 +79,16 @@ private static void displayPrompt() {
 	  
 	  Scanner sc = new Scanner(System.in);
 	  
-	  int i = sc.nextInt();
-	  
-	  return i;
-	  
+	  String i = sc.next().toLowerCase();
+	  if (i.equals("left")) {
+		  return 0;
+	  }
+	  else if (i.equals("right")) {
+		  return 1;
+	  }
+	  else {
+		  return 2;
+	  }
   }
  
 }
