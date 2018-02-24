@@ -22,7 +22,10 @@ public class main{
   public void choice(int option){
 	  
 	  Prompt currentPrompt = prompts.get(promptNum);
-	  
+	  stress += currentPrompt.getStressChange()[option];
+	  energy += currentPrompt.getEnergyChange()[option];
+	  friends += currentPrompt.getFriendsChange()[option];
+	  grades += currentPrompt.getGradesChange()[option];
 	  
   }
  
