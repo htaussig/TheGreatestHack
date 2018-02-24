@@ -24,15 +24,7 @@ public class main{
 		  System.out.println("Time: " + hour + ": " + (minute / 10) + (minute % 10));
 		  displayPrompt();
 		  int choice = getButtonPressed();
-		  if (choice != -1) {
-			  choice(choice);
-			  promptNum++;
-			  System.out.println("time passes");
-			  printStats();
-		  }
-		  else {
-			  System.out.println("You failed");
-		  }
+		  choice(choice);
 		  timeIncrease();
 		  
 	  }
@@ -81,6 +73,16 @@ private static void displayPrompt() {
    * @var int option: shows what option the player chose. 0 for first, 1 for second option
    */
   public static void choice(int option){
+	  
+	  if (option != -1) {
+		  promptNum++;
+		  //System.out.println("time passes");
+		  printStats();
+	  }
+	  else {
+		  System.out.println("You failed");
+		  return;
+	  }
 	  
 	  Prompt currentPrompt = prompts.get(promptNum);
 	  stress += currentPrompt.getStressChange()[option];

@@ -12,7 +12,7 @@ public class Prompt {
 	private int[] possibleDays = new int[2];
 	private double orderNum;
 
-	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2, int[] possibleTimes, int[] possibleDays) {
+	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2, int time1, int time2, int day1, int day2) {
 		this.prompt = prompt;
 		this.options[0] = option1;
 		this.options[1] = option2;
@@ -24,8 +24,10 @@ public class Prompt {
 		this.friends[1] = friends2;
 		this.grades[0] = grades1;
 		this.grades[1] = grades2;
-		this.possibleTimes = possibleTimes;
-		this.possibleDays = possibleDays;
+		this.possibleTimes[0] = time1;
+		this.possibleTimes[1] = time2;
+		this.possibleDays[0] = day1;
+		this.possibleDays[1] = day2;
 		this.orderNum = Math.random();
 	}
 	
