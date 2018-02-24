@@ -23,10 +23,6 @@ public class Prompt {
 		this.orderNum = Math.random();
 	}
 	
-	public String toString() {
-		return this.prompt;
-	}
-	
 	public int[] getStressChange(){
 		return stress;
 	}
@@ -43,4 +39,7 @@ public class Prompt {
 		return grades;
 	}
 	
+	public String toString() {
+		return this.prompt;
+	}
 }
