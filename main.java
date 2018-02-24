@@ -10,6 +10,7 @@ public class main{
 	private int friends = 50;
 	private int grades = 50;
 	private static boolean alive = true;
+	private int time = 0;
 
   public static void main(String args[]){
 	  
@@ -52,13 +53,13 @@ private static void intializePrompts() {
 	  
   }
   
-  public void getbuttonPressed(){
+  public void getButtonPressed(){
 	  
 	  Scanner sc = new Scanner(System.in);
 	  
 	  int i = sc.nextInt();
 	  
-	  
+	  choice(i);
 	  
   }
  
