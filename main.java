@@ -12,7 +12,8 @@ public class main{
 	private static int friends = 50;
 	private static int grades = 50;
 	private static boolean alive = true;
-	private int time = 0;
+	private static int hour = 0;
+	private static int minute = 0;
 
   public static void main(String args[]){
 	  
@@ -20,6 +21,7 @@ public class main{
 	  printStats();
 	  
 	  while(alive){
+		  System.out.println("Time: " + hour + ": " + (minute / 10) + (minute % 10));
 		  displayPrompt();
 		  int choice = getButtonPressed();
 		  if (choice != -1) {
@@ -31,6 +33,11 @@ public class main{
 		  else {
 			  System.out.println("You failed");
 		  }
+		  minute += 30;
+		  if (minute >= 60) {
+			  hour += minute / 60;
+			  minute -= 60;
+		  }
 	  }
 	 
 	  
@@ -38,12 +45,10 @@ public class main{
   }
 
   private static void printStats() {
-	  
 	  System.out.println("Stress: " + stress);
 	  System.out.println("Energy: " + energy);
 	  System.out.println("Friends: " + friends);
 	  System.out.println("Grades: " + grades);
-	  
   }
 
 private static void displayPrompt() {
@@ -64,7 +69,6 @@ private static void displayPrompt() {
 	  prompts.add(new Prompt("There's a lecture in a university in your area that is open to the public. Do you go?", "YES", "NO", 0, 0, -5, 0, -5, 5, 15, -5));
 	  prompts.add(new Prompt("There's a scholarship available for college. Do you try to get it?", "YES", "NO", 15, -5, -15, 5, -5, 5, -5, 5));
 	  prompts.add(new Prompt("There's a job opening in your area and you fit the criteria that would be needed to fill it. Do you apply for the job?", "YES", "NO", 15, -5, -10, 10, -10, 10, -5, 15));
-	  //System.out.println(prompts.get(0));
   }
 
 /**
