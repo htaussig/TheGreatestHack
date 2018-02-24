@@ -47,6 +47,7 @@ private static void printStats() {
 	  System.out.println("Energy: " + energy);
 	  System.out.println("Friends: " + friends);
 	  System.out.println("Grades: " + grades);
+	  System.out.println("Day" + getDayString(day));
   }
 
 private static void displayPrompt() {
@@ -120,7 +121,7 @@ private static void displayPrompt() {
 	  return true;
   }
   
-  public String getDayString(int day){
+  public static String getDayString(int day){
 	  
 	  switch(day){
 	  
