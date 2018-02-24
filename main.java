@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class main{
 
-  private ArrayList<Prompt> = new ArrayList<Prompt>();
+  private ArrayList<Prompt> prompts = new ArrayList<>();
   private int Stress;
   private int Energy;
   private int Friends;
