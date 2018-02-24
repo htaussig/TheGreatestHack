@@ -22,7 +22,7 @@ public class main{
 	  while(alive){
 		  displayPrompt();
 		  int choice = getButtonPressed();
-		  if (choice != 2) {
+		  if (choice != -1) {
 			  choice(choice);
 			  promptNum++;
 			  System.out.println("time passes");
@@ -93,7 +93,7 @@ private static void displayPrompt() {
 		  return 1;
 	  }
 	  else {
-		  return 2;
+		  return -1;
 	  }
   }
  
