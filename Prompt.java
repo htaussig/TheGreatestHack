@@ -42,4 +42,5 @@ public class Prompt {
 	public int[] getGradesChange(){
 		return grades;
 	}
+	
 }
