@@ -67,6 +67,13 @@ private static void displayPrompt() {
 	  prompts.add(new Prompt("There's a lecture in a university in your area that is open to the public. Do you go?", "YES", "NO", 0, 0, -5, 0, -5, 5, 15, -5));
 	  prompts.add(new Prompt("There's a scholarship available for college. Do you try to get it?", "YES", "NO", 15, -5, -15, 5, -5, 5, -5, 5));
 	  prompts.add(new Prompt("There's a job opening in your area and you fit the criteria that would be needed to fill it. Do you apply for the job?", "YES", "NO", 15, -5, -10, 10, -10, 10, 15, -5));
+	  prompts.add(new Prompt("Do you sign up for an educational summer program or hang out with friends?","YES", "SOUNDS LAME", 5, -5, -5, -5, -5, 15, 15, -5));
+	  prompts.add(new Prompt("Do you join the school's Science Team?", "YES", "NO", 15, -5, -5, 0, -5, 0, 5, 0));
+	  prompts.add(new Prompt("Do you join the school's Debate Team?", "YES", "NO", 15, -5, -5, 0, -5, 0, 5, 0));
+	  prompts.add(new Prompt("Your nerdy friend invites you to go to MAHacks", "HELL YEAH", "EW NERDS", 5, -10, -15, 5, 15, -15, 20, 0));
+	  prompts.add(new Prompt("Its a holiday and family are coming over, do you join?", "YES", "NO", -5, 10, -15, 10, -5, 5, 0, 5));
+	  prompts.add(new Prompt("Online friends invite you to a World of Warcraft raid, do you join?", "HELL YEAH", "NO", -5, 5, -10, 5, 15, -15, -20, 5));
+	  prompts.add(new Prompt("Your friends parents aren't home and they invite you to drink, do you go now?", "YES", "NO", -15, 5, 15, -5, 5, -15, -20, 15));
   }
 
 /**
