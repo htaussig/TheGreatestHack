@@ -1,3 +1,5 @@
+package mahacks;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -5,10 +7,10 @@ public class main{
 
 	private static int promptNum;
 	private static ArrayList<Prompt> prompts = new ArrayList<>();
-	private int stress = 50;
-	private int energy = 50;
-	private int friends = 50;
-	private int grades = 50;
+	private static int stress = 50;
+	private static int energy = 50;
+	private static int friends = 50;
+	private static int grades = 50;
 	private static boolean alive = true;
 	private int time = 0;
 
@@ -28,7 +30,7 @@ public class main{
 
   private static void displayPrompt() {
 	
-	  System.out.println(prompts.get(promptNum).toString());
+	  //System.out.println(prompts.get(promptNum).toString());
 	  promptNum++;
 	  
   }
@@ -43,7 +45,7 @@ private static void intializePrompts() {
    * this method is called when a prompt option is chosen
    * @var int option: shows what option the player chose. 0 for first, 1 for second option
    */
-  public void choice(int option){
+  public static void choice(int option){
 	  
 	  Prompt currentPrompt = prompts.get(promptNum);
 	  stress += currentPrompt.getStressChange()[option];
@@ -53,7 +55,7 @@ private static void intializePrompts() {
 	  
   }
   
-  public void getButtonPressed(){
+  public static void getButtonPressed(){
 	  
 	  Scanner sc = new Scanner(System.in);
 	  

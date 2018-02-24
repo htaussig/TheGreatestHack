@@ -1,3 +1,6 @@
+package mahacks;
+
+
 public class Prompt {
 	
 	private String prompt;

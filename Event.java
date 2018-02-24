@@ -1,4 +1,7 @@
-class Event {
+package mahacks;
+
+
+public class Event {
     String event;
     int stress, energy, grades, friends;
 
