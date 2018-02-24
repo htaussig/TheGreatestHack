@@ -27,7 +27,7 @@ public class main{
 		  int choice = getButtonPressed();
 		  choice(choice);
 		  timeIncrease();
-		  
+		  promptNum++;
 	  }
 	 
 	  
@@ -76,7 +76,7 @@ private static void displayPrompt() {
   public static void choice(int option){
 	  
 	  if (option != -1) {
-		  promptNum++;
+		  //promptNum++;
 		  //System.out.println("time passes");
 		  printStats();
 	  }
@@ -118,5 +118,30 @@ private static void displayPrompt() {
 	  }
 	  
 	  return true;
+  }
+  
+  public String getDayString(int day){
+	  
+	  switch(day){
+	  
+	  case 0:
+		  return "Monday";
+	  case 1: 
+		  return "Tuesday";
+	  case 2:
+		  return "Wednesday";
+	  case 3:
+		  return "Thursday";
+	  case 4:
+		  return "Friday";
+	  case 5:
+		  return "Saturday";
+	  case 6:
+		  return "Sunday";
+	  default: 
+		  return "Invalid Day";
+	  }
+	  
+	  
   }
 }
