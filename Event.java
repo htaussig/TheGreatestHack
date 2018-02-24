@@ -1,5 +1,4 @@
-//package mahacks;
-
+package SchoolIsCool;
 
 public class Event {
     String event;

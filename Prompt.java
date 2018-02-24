@@ -1,14 +1,13 @@
-package mahacks;
-
+package SchoolIsCool;
 
 public class Prompt {
 	
 	private String prompt;
+	private String[] options = new String[2];
 	private int[] stress = new int[2];
 	private int[] energy = new int[2];
 	private int[] friends = new int[2];
 	private int[] grades = new int[2];
-	private String[] options = new String[2];
 	private double orderNum;
 
 	public Prompt(String prompt, String option1, String option2, int stress1, int stress2, int energy1, int energy2, int friends1, int friends2, int grades1, int grades2) {
@@ -24,6 +23,10 @@ public class Prompt {
 		this.grades[0] = grades1;
 		this.grades[1] = grades2;
 		this.orderNum = Math.random();
+	}
+	
+	public String getOption(int option) {
+		return this.options[option];
 	}
 	
 	public int[] getStressChange(){

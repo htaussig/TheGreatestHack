@@ -1,4 +1,4 @@
-package mahacks;
+package SchoolIsCool;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -47,11 +47,11 @@ private static void displayPrompt() {
 		promptNum = 0;
 	}
 	  System.out.println(prompts.get(promptNum).toString());
-	  
+	  System.out.println(prompts.get(promptNum).getOption(0) + "   or   " + prompts.get(promptNum).getOption(1));	  
   }
 
   private static void intializePrompts() {
-	  prompts.add(new Prompt("You did your homework until 1 am. When do you wake up?", "yes", "no", -5, 10, -15, 5, 0, -5, 10, -10));
+	  prompts.add(new Prompt("You did your homework until 1 am. When do you wake up?", "YES", "NO", -5, 10, -15, 5, 0, -5, 10, -10));
 		
 	  //System.out.println(prompts.get(0));
   }
